@@ -1,0 +1,6 @@
+framework module Pods_Morning_Assist {
+  umbrella header "Pods-Morning Assist-umbrella.h"
+
+  export *
+  module * { export * }
+}

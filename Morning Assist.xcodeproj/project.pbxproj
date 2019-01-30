@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D43F58C2201985C002D30DB /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43F58B2201985C002D30DB /* WeatherDataModel.swift */; };
+		4D53DBAE21FFF79C00D8C3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DBAD21FFF79C00D8C3CA /* AppDelegate.swift */; };
+		4D53DBB021FFF79C00D8C3CA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */; };
+		4D53DBB321FFF79C00D8C3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB121FFF79C00D8C3CA /* Main.storyboard */; };
+		4D53DBB521FFF79F00D8C3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB421FFF79F00D8C3CA /* Assets.xcassets */; };
+		4D53DBB821FFF79F00D8C3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB621FFF79F00D8C3CA /* LaunchScreen.storyboard */; };
+		63FEBE59C8C55A68A2AF8CC6 /* Pods_Morning_Assist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9686A5B1DF32B407C08A63 /* Pods_Morning_Assist.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D43F58B2201985C002D30DB /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		4D53DBAA21FFF79C00D8C3CA /* Morning Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morning Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D53DBAD21FFF79C00D8C3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		4D53DBB221FFF79C00D8C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D53DBB421FFF79F00D8C3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D53DBB721FFF79F00D8C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D53DBB921FFF79F00D8C3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F0AD2A6885791116C22D16 /* Pods-Morning Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morning Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9686A5B1DF32B407C08A63 /* Pods_Morning_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morning_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1E637A38E96A72591C0E90 /* Pods-Morning Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morning Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D53DBA721FFF79C00D8C3CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63FEBE59C8C55A68A2AF8CC6 /* Pods_Morning_Assist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D43F58D2201991F002D30DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D43F58B2201985C002D30DB /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D53DBA121FFF79C00D8C3CA = {
+			isa = PBXGroup;
+			children = (
+				4D53DBAC21FFF79C00D8C3CA /* Morning Assist */,
+				4D53DBAB21FFF79C00D8C3CA /* Products */,
+				79532A5E905135951CF3EB9F /* Pods */,
+				C1177B1A8AD6E9BE62570EF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D53DBAB21FFF79C00D8C3CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DBAA21FFF79C00D8C3CA /* Morning Assist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D53DBAC21FFF79C00D8C3CA /* Morning Assist */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DBAD21FFF79C00D8C3CA /* AppDelegate.swift */,
+				4D43F58D2201991F002D30DB /* Model */,
+				4D53DBC021FFFA7700D8C3CA /* Controller */,
+				4D53DBBF21FFFA6900D8C3CA /* View */,
+				4D53DBB421FFF79F00D8C3CA /* Assets.xcassets */,
+				4D53DBB921FFF79F00D8C3CA /* Info.plist */,
+			);
+			path = "Morning Assist";
+			sourceTree = "<group>";
+		};
+		4D53DBBF21FFFA6900D8C3CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DBB121FFF79C00D8C3CA /* Main.storyboard */,
+				4D53DBB621FFF79F00D8C3CA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D53DBC021FFFA7700D8C3CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		79532A5E905135951CF3EB9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75F0AD2A6885791116C22D16 /* Pods-Morning Assist.debug.xcconfig */,
+				FD1E637A38E96A72591C0E90 /* Pods-Morning Assist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1177B1A8AD6E9BE62570EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA9686A5B1DF32B407C08A63 /* Pods_Morning_Assist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D53DBA921FFF79C00D8C3CA /* Morning Assist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D53DBBC21FFF79F00D8C3CA /* Build configuration list for PBXNativeTarget "Morning Assist" */;
+			buildPhases = (
+				A6A6036CA56540EED1D236D0 /* [CP] Check Pods Manifest.lock */,
+				4D53DBA621FFF79C00D8C3CA /* Sources */,
+				4D53DBA721FFF79C00D8C3CA /* Frameworks */,
+				4D53DBA821FFF79C00D8C3CA /* Resources */,
+				091361EC85ADB5E97D061146 /* [CP] Embed Pods Frameworks */,
+				D6F41614C0E85E9341C1722F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Morning Assist";
+			productName = "Morning Assist";
+			productReference = 4D53DBAA21FFF79C00D8C3CA /* Morning Assist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D53DBA221FFF79C00D8C3CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Mascarenhas;
+				TargetAttributes = {
+					4D53DBA921FFF79C00D8C3CA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 4D53DBA521FFF79C00D8C3CA /* Build configuration list for PBXProject "Morning Assist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D53DBA121FFF79C00D8C3CA;
+			productRefGroup = 4D53DBAB21FFF79C00D8C3CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D53DBA921FFF79C00D8C3CA /* Morning Assist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D53DBA821FFF79C00D8C3CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D53DBB821FFF79F00D8C3CA /* LaunchScreen.storyboard in Resources */,
+				4D53DBB521FFF79F00D8C3CA /* Assets.xcassets in Resources */,
+				4D53DBB321FFF79C00D8C3CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091361EC85ADB5E97D061146 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A6036CA56540EED1D236D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Morning Assist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F41614C0E85E9341C1722F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D53DBA621FFF79C00D8C3CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D53DBB021FFF79C00D8C3CA /* WeatherViewController.swift in Sources */,
+				4D53DBAE21FFF79C00D8C3CA /* AppDelegate.swift in Sources */,
+				4D43F58C2201985C002D30DB /* WeatherDataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D53DBB121FFF79C00D8C3CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D53DBB221FFF79C00D8C3CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D53DBB621FFF79F00D8C3CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D53DBB721FFF79F00D8C3CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D53DBBA21FFF79F00D8C3CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D53DBBB21FFF79F00D8C3CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D53DBBD21FFF79F00D8C3CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F0AD2A6885791116C22D16 /* Pods-Morning Assist.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M82JYFS3C2;
+				INFOPLIST_FILE = "Morning Assist/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Insight.Morning-Assist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D53DBBE21FFF79F00D8C3CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD1E637A38E96A72591C0E90 /* Pods-Morning Assist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M82JYFS3C2;
+				INFOPLIST_FILE = "Morning Assist/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Insight.Morning-Assist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D53DBA521FFF79C00D8C3CA /* Build configuration list for PBXProject "Morning Assist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D53DBBA21FFF79F00D8C3CA /* Debug */,
+				4D53DBBB21FFF79F00D8C3CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D53DBBC21FFF79F00D8C3CA /* Build configuration list for PBXNativeTarget "Morning Assist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D53DBBD21FFF79F00D8C3CA /* Debug */,
+				4D53DBBE21FFF79F00D8C3CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D53DBA221FFF79C00D8C3CA /* Project object */;
+}
