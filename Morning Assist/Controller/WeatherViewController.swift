@@ -9,20 +9,25 @@
 import UIKit
 import CoreLocation
 import Alamofire
+import SwifteriOS
 import SwiftyJSON
-import GooglePlaces
-
+import CoreML
+import RSScrollingLabel
 
 class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     
-    var placesClient: GMSPlacesClient!
-    var placeFields: GMSPlace!
+    let locationManager = CLLocationManager()
+    let weatherModel = WeatherDataModel()
+    let sentimentClassifer = TweetSentimentClassifier()
+    let tweetCount = 100
+    
+    let companies: [String] = ["@Apple"]
+    
+    let swifter = Swifter(consumerKey: "9QJ6KMqslglgVF5aswmUql4bX", consumerSecret: "LaxFiy9Pz5BGzMxSSOhW4NlieZouXT8fi2KeHnjWtj7V8UO0wY")
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let API_ID = "d1a58756b8377c9af721ff5a03fdde46"
     
-    let locationManager = CLLocationManager()
-    let weatherModel = WeatherDataModel()
-    
+    @IBOutlet weak var sentimentLabel: UILabel!
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
@@ -37,7 +42,6 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             (sender as! UIButton).setTitle("C", for: [])
         }
     }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -45,76 +49,51 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        placesClient = GMSPlacesClient.shared()
+        //fetchData()
     }
-    func getCurrentPlace()
+    
+    //MARK: -Make Prediction
+    func makePrediction(with tweets: [TweetSentimentClassifierInput])
     {
-        var id: String = ""
-        placesClient.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
-            if let error = error {
-                print("Pick Place error: \(error.localizedDescription)")
-                return
-            }
+        do {
+            let predictions = try sentimentClassifer.predictions(inputs: tweets)
             
-//            self.nameLabel.text = "No current place"
-//            self.addressLabel.text = ""
+            var sentimentScore = 0
             
-            if let placeLikelihoodList = placeLikelihoodList {
-                let place = placeLikelihoodList.likelihoods.first?.place
-                if let place = place {
-                    print("\n\n\n\n")
-                    id = place.placeID
-                    
+            for pred in predictions {
+                let sentiment = pred.label
+                
+                if sentiment == "Pos" {
+                    sentimentScore += 1
+                } else if sentiment == "Neg" {
+                    sentimentScore -= 1
                 }
             }
-        })
-        
-        // Specify the place data types to return (in this case, just photos).
-        
-//
-//        placesClient?.fetchPlace(fromPlaceID: id,
-//                                 placeFields: nil,
-//                                 sessionToken: nil, callback: {
-//                                    (place: GMSPlace?, error: Error?) in
-//                                    if let error = error {
-//                                        print("An error occurred: \(error.localizedDescription)")
-//                                        return
-//                                    }
-//                                    if let place = place {
-//                                        // Get the metadata for the first photo in the place photo metadata list.
-//                                        let photoMetadata: GMSPlacePhotoMetadata = place.photos![0]
-//
-//                                        // Call loadPlacePhoto to display the bitmap and attribution.
-//                                        self.placesClient?.loadPlacePhoto(photoMetadata, callback: { (photo, error) -> Void in
-//                                            if let error = error {
-//                                                // TODO: Handle the error.
-//                                                print("Error loading photo metadata: \(error.localizedDescription)")
-//                                                return
-//                                            } else {
-//                                                // Display the first image and its attributions.
-//                                                self.imageView?.image = photo;
-//                                                self.lblText?.attributedText = photoMetadata.attributions;
-//                                            }
-//                                        })
-//                                    }
-//        })
+            self.updateTwitterClassifierData(with: sentimentScore)
+            
+        } catch {
+            print("There was an error with making a prediction, \(error)")
+        }
     }
+    
     //MARK: - Networking
     func getWeatherData(url: String ,params:[String:String])
     {
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
             if response.result.isSuccess
             {
-                let weatherJSON: JSON = JSON(response.result.value!)
+                
+                let weatherJSON: SwiftyJSON.JSON = SwiftyJSON.JSON (response.result.value!)
                 self.updateWeatherData(weatherJSON: weatherJSON)
             }
             else
             {
                 print("Error in getting weather data")
-            
+
             }
         }
     }
+    
     //MARK: - Location Manager Delegate Methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
@@ -126,7 +105,6 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             let lat = String(location.coordinate.latitude)
             let lon = String(location.coordinate.longitude)
             let parameters: [String: String] = ["lat":lat,"lon":lon,"appid":API_ID]
-            getCurrentPlace()
             getWeatherData(url: WEATHER_URL, params: parameters)
         }
         
@@ -138,7 +116,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     }
     
     //MARK: - JSON Parsing Methods
-    func updateWeatherData(weatherJSON: JSON)
+    func updateWeatherData(weatherJSON: SwiftyJSON.JSON)
     {
         if let temp = weatherJSON["main"]["temp"].double
         {
@@ -152,6 +130,26 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
         else
         {
             errorMessage.text = "Weather Unavaliable"
+        }
+    }
+    func fetchData()
+    {
+        for company in companies
+        {
+            swifter.searchTweet(using: company, lang:"en", count: tweetCount, tweetMode: .extended, success: { (results, metadata) in
+                var tweets = [TweetSentimentClassifierInput]()
+                
+                for i in 0..<self.tweetCount {
+                    if let tweet = results[i]["full_text"].string {
+                        let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
+                        tweets.append(tweetForClassification)
+                    }
+                }
+                self.makePrediction(with: tweets)
+                
+            }) { (error) in
+                print("\(error): Error in Twitter API Request")
+            }
         }
     }
     
@@ -172,6 +170,26 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             return F
         }
         return weatherModel.temperature
+    }
+    func updateTwitterClassifierData(with sentimentScore: Int)
+    {
+        
+        if sentimentScore > 20 {
+            self.sentimentLabel.text = "😍"
+        } else if sentimentScore > 10 {
+            self.sentimentLabel.text = "😀"
+        } else if sentimentScore > 0 {
+            self.sentimentLabel.text = "🙂"
+        } else if sentimentScore == 0 {
+            self.sentimentLabel.text = "😐"
+        } else if sentimentScore > -10 {
+            self.sentimentLabel.text = "😕"
+        } else if sentimentScore > -20 {
+            self.sentimentLabel.text = "😡"
+        } else {
+            self.sentimentLabel.text = "🤮"
+        }
+        //self.sentimentLabel.animate(to: "Scroll Down", direction: .down)
         
     }
 }

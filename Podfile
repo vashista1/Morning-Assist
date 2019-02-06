@@ -11,5 +11,6 @@ target 'Morning Assist' do
     pod 'SVProgressHUD'
     pod 'GooglePlaces'
     pod 'GoogleMaps'
+    pod 'RSScrollingLabel'
 
 end
