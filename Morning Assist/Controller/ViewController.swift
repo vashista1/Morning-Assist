@@ -9,20 +9,21 @@
 import UIKit
 import CoreLocation
 import Alamofire
-import SwifteriOS
+import Swifter
 import SwiftyJSON
 import CoreML
 import RSScrollingLabel
 
 class WeatherViewController: UIViewController,CLLocationManagerDelegate{
+class WeatherViewController: UIViewController{
     
     let locationManager = CLLocationManager()
     let weatherModel = WeatherDataModel()
     let sentimentClassifer = TweetSentimentClassifier()
     let tweetCount = 100
-    
+
     let companies: [String] = ["@Apple"]
-    
+
     let swifter = Swifter(consumerKey: "9QJ6KMqslglgVF5aswmUql4bX", consumerSecret: "LaxFiy9Pz5BGzMxSSOhW4NlieZouXT8fi2KeHnjWtj7V8UO0wY")
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let API_ID = "d1a58756b8377c9af721ff5a03fdde46"
@@ -49,7 +50,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        //fetchData()
+        fetchData()
     }
     
     //MARK: -Make Prediction
@@ -57,12 +58,12 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     {
         do {
             let predictions = try sentimentClassifer.predictions(inputs: tweets)
-            
+
             var sentimentScore = 0
-            
+
             for pred in predictions {
                 let sentiment = pred.label
-                
+
                 if sentiment == "Pos" {
                     sentimentScore += 1
                 } else if sentiment == "Neg" {
@@ -70,7 +71,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
                 }
             }
             self.updateTwitterClassifierData(with: sentimentScore)
-            
+
         } catch {
             print("There was an error with making a prediction, \(error)")
         }
@@ -82,7 +83,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
             if response.result.isSuccess
             {
-                
+
                 let weatherJSON: SwiftyJSON.JSON = SwiftyJSON.JSON (response.result.value!)
                 self.updateWeatherData(weatherJSON: weatherJSON)
             }
@@ -107,14 +108,14 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             let parameters: [String: String] = ["lat":lat,"lon":lon,"appid":API_ID]
             getWeatherData(url: WEATHER_URL, params: parameters)
         }
-        
+
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
         print("\(error): Error in retriving location data.")
         errorMessage.text = "Location Unavaliable!"
     }
-    
+
     //MARK: - JSON Parsing Methods
     func updateWeatherData(weatherJSON: SwiftyJSON.JSON)
     {
@@ -125,7 +126,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             weatherModel.condition = weatherJSON["weather"][0]["id"].intValue
             weatherModel.weatherIcon = weatherModel.weatherIconImg(condition: weatherModel.condition)
             weatherModel.iconBool = false
-            updateUI()
+//            updateUI()
         }
         else
         {
@@ -152,7 +153,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             }
         }
     }
-    
+
     //MARK: - UI Update Methods
     func updateUI()
     {
@@ -173,7 +174,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
     }
     func updateTwitterClassifierData(with sentimentScore: Int)
     {
-        
+
         if sentimentScore > 20 {
             self.sentimentLabel.text = "😍"
         } else if sentimentScore > 10 {
@@ -190,7 +191,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate{
             self.sentimentLabel.text = "🤮"
         }
         //self.sentimentLabel.animate(to: "Scroll Down", direction: .down)
-        
+
     }
 }
 

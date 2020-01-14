@@ -12,5 +12,6 @@ target 'Morning Assist' do
     pod 'GooglePlaces'
     pod 'GoogleMaps'
     pod 'RSScrollingLabel'
+    pod 'Swifter', '~> 1.4.7'
 
 end

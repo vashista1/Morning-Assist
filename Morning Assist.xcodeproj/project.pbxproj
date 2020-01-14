@@ -3,17 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4D27AD6F2204B32300783C5D /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D27AD6E2204B32300783C5D /* TweetSentimentClassifier.mlmodel */; };
-		4D27AD822204B3BE00783C5D /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D27AD7B2204B39900783C5D /* SwifteriOS.framework */; };
-		4D27AD832204B3BE00783C5D /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D27AD7B2204B39900783C5D /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D27AD8A2204B5B900783C5D /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D27AD892204B5B900783C5D /* secrets.plist */; };
 		4D43F58C2201985C002D30DB /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43F58B2201985C002D30DB /* WeatherDataModel.swift */; };
 		4D53DBAE21FFF79C00D8C3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DBAD21FFF79C00D8C3CA /* AppDelegate.swift */; };
-		4D53DBB021FFF79C00D8C3CA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */; };
+		4D53DBB021FFF79C00D8C3CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DBAF21FFF79C00D8C3CA /* ViewController.swift */; };
 		4D53DBB321FFF79C00D8C3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB121FFF79C00D8C3CA /* Main.storyboard */; };
 		4D53DBB521FFF79F00D8C3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB421FFF79F00D8C3CA /* Assets.xcassets */; };
 		4D53DBB821FFF79F00D8C3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DBB621FFF79F00D8C3CA /* LaunchScreen.storyboard */; };
@@ -56,28 +54,7 @@
 			remoteGlobalIDString = F6B4D5751C7BAC4500E06514;
 			remoteInfo = SwifterTests;
 		};
-		4D27AD842204B3BE00783C5D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D27AD702204B39800783C5D /* Swifter.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B9F50ED1944A5AB00894629;
-			remoteInfo = SwifteriOS;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4D27AD862204B3BE00783C5D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4D27AD832204B3BE00783C5D /* SwifteriOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D27AD6E2204B32300783C5D /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
@@ -86,11 +63,12 @@
 		4D43F58B2201985C002D30DB /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		4D53DBAA21FFF79C00D8C3CA /* Morning Assist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morning Assist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53DBAD21FFF79C00D8C3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		4D53DBAF21FFF79C00D8C3CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D53DBB221FFF79C00D8C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D53DBB421FFF79F00D8C3CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D53DBB721FFF79F00D8C3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D53DBB921FFF79F00D8C3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB4A16D2345DC1400F2D810 /* Morning Assist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Morning Assist"; sourceTree = "<group>"; };
 		75F0AD2A6885791116C22D16 /* Pods-Morning Assist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morning Assist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist.debug.xcconfig"; sourceTree = "<group>"; };
 		BA9686A5B1DF32B407C08A63 /* Pods_Morning_Assist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morning_Assist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1E637A38E96A72591C0E90 /* Pods-Morning Assist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morning Assist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63FEBE59C8C55A68A2AF8CC6 /* Pods_Morning_Assist.framework in Frameworks */,
-				4D27AD822204B3BE00783C5D /* SwifteriOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +152,7 @@
 		4D53DBC021FFFA7700D8C3CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D53DBAF21FFF79C00D8C3CA /* WeatherViewController.swift */,
+				4D53DBAF21FFF79C00D8C3CA /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +169,7 @@
 		C1177B1A8AD6E9BE62570EF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DB4A16D2345DC1400F2D810 /* Morning Assist */,
 				BA9686A5B1DF32B407C08A63 /* Pods_Morning_Assist.framework */,
 			);
 			name = Frameworks;
@@ -210,12 +188,10 @@
 				4D53DBA821FFF79C00D8C3CA /* Resources */,
 				091361EC85ADB5E97D061146 /* [CP] Embed Pods Frameworks */,
 				D6F41614C0E85E9341C1722F /* [CP] Copy Pods Resources */,
-				4D27AD862204B3BE00783C5D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4D27AD852204B3BE00783C5D /* PBXTargetDependency */,
 			);
 			name = "Morning Assist";
 			productName = "Morning Assist";
@@ -320,26 +296,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RSScrollingLabel/RSScrollingLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSScrollingLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6A6036CA56540EED1D236D0 /* [CP] Check Pods Manifest.lock */ = {
@@ -370,22 +335,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Morning Assist/Pods-Morning Assist-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -395,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D53DBB021FFF79C00D8C3CA /* WeatherViewController.swift in Sources */,
+				4D53DBB021FFF79C00D8C3CA /* ViewController.swift in Sources */,
 				4D53DBAE21FFF79C00D8C3CA /* AppDelegate.swift in Sources */,
 				4D27AD6F2204B32300783C5D /* TweetSentimentClassifier.mlmodel in Sources */,
 				4D43F58C2201985C002D30DB /* WeatherDataModel.swift in Sources */,
@@ -403,14 +361,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4D27AD852204B3BE00783C5D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwifteriOS;
-			targetProxy = 4D27AD842204B3BE00783C5D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D53DBB121FFF79C00D8C3CA /* Main.storyboard */ = {
@@ -552,7 +502,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75F0AD2A6885791116C22D16 /* Pods-Morning Assist.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82JYFS3C2;
@@ -561,7 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Insight.Morning-Assist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vashg.Morning-Assist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,7 +521,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD1E637A38E96A72591C0E90 /* Pods-Morning Assist.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82JYFS3C2;
@@ -581,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Insight.Morning-Assist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vashg.Morning-Assist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
