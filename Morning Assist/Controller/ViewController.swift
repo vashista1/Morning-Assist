@@ -24,9 +24,9 @@ class WeatherViewController: UIViewController{
 
     let companies: [String] = ["@Apple"]
 
-    let swifter = Swifter(consumerKey: "9QJ6KMqslglgVF5aswmUql4bX", consumerSecret: "LaxFiy9Pz5BGzMxSSOhW4NlieZouXT8fi2KeHnjWtj7V8UO0wY")
+    let swifter = Swifter(consumerKey: "_____", consumerSecret: "_____")
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    let API_ID = "d1a58756b8377c9af721ff5a03fdde46"
+    let API_ID = "_____"
     
     @IBOutlet weak var sentimentLabel: UILabel!
     @IBOutlet weak var errorMessage: UILabel!
